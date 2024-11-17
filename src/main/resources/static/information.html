@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluffy Paw Clinic</title>
+    <link rel="stylesheet" href="information.css"> //ที่ลิงค์css
+</head>
+<body>
+    <div class="header">
+        <img src="logo.png" class="logo" alt="โลโก้ Fluffy Paw Clinic">
+        <div class="clinic-name"></div>
+        <a class="back-arrow" onclick="history.back()" title="ย้อนกลับ">&#8592;</a>
+    </div>
+    <div class="outer-container">
+        <div class="customer-info-label">ข้อมูลลูกค้า</div>
+        <div class="inner-container">
+            <div class="field-row">
+                <div class="field">
+                    <label for="name">ชื่อ:</label>
+                    <input type="text" id="name" placeholder="กรอกชื่อที่นี่">
+                </div>
+                <div class="field">
+                    <label for="phone">เบอร์โทรศัพท์:</label>
+                    <input type="tel" id="phone" placeholder="กรอกเบอร์โทรศัพท์ที่นี่">
+                </div>
+            </div>
+            <div class="field full-width-field">
+                <label for="address">ที่อยู่:</label>
+                <input type="text" id="address" placeholder="กรอกที่อยู่ที่นี่">
+            </div>
+            <div class="edit-button">แก้ไข</div>
+        </div>
+    </div>
+    <div class="pet-label-container">
+        <div class="pet-label">สัตว์เลี้ยง</div>
+    </div>
+    <div class="pet-box">
+        <img src="path/to/pet-image.jpg" alt="Pet Image" class="pet-image">
+        <div class="pet-name">ชื่อสัตว์เลี้ยง</div>
+        <button class="delete-button">−</button>
+        <button class="add-button" onclick="addPet()">+</button>
+    </div>
+    <script src="information.js"></script>  //ที่ลิงค์js
+</body>
+</html>

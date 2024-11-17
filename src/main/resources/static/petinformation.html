@@ -1,0 +1,86 @@
+ฟ<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluffy Paws Clinic - Pet Information</title>
+    <link rel="stylesheet" href="petinformation.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://via.placeholder.com/40" alt="Logo">
+            <h1>Fluffy Paws Clinic</h1>
+        </div>
+
+        <div class="back-info">
+            <a href="#" class="back-button" onclick="goBack()">←</a>
+            <h2>ข้อมูลสัตว์เลี้ยง</h2>
+        </div>
+
+        <div class="pet-info">
+            <img src="https://via.placeholder.com/100" alt="Pet Image">
+            <div class="pet-details">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <p id="petName"><strong>ชื่อ:</strong> </p>
+                    <p id="petGender"><strong>เพศ:</strong> </p>
+                    <button class="edit-button" onclick="openEditModal()">แก้ไข</button>
+                </div>
+                <div class="pet-info-grid">
+                    <p id="petAge" style="margin-top: 2vh;"><strong>อายุ:</strong> </p>
+                    <p id="petBreed" style="margin-left: -10vh; margin-top: 2vh;"><strong>พันธุ์:</strong> </p>
+                    <p id="petWeight" style="margin-top: 0.1vh;"><strong>น้ำหนัก:</strong> </p>
+                    <p id="petColor" style="margin-left: -10vh; margin-top: 0.1vh;"><strong>สีขน:</strong> </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="history-header">
+            <h2>ประวัติการรักษาล่าสุด</h2>
+            <button class="add-button" onclick="openAddModal()">เพิ่ม+</button>
+        </div>
+        <table class="history-table" id="historyTable">
+            <thead>
+                <tr>
+                    <th>วันที่</th>
+                    <th>ประวัติการรักษา</th>
+                    <th>ชื่อยา</th>
+                    <th>ราคา</th>
+                    <th>นัดหมาย</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- ประวัติการรักษาจะเพิ่มที่นี่ -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Edit Modal -->
+    <div class="modal" id="editModal">
+        <div class="modal-content">
+            <h2>แก้ไขข้อมูลสัตว์เลี้ยง</h2>
+            <input type="text" id="editName" placeholder="ชื่อ">
+            <input type="text" id="editGender" placeholder="เพศ">
+            <input type="text" id="editAge" placeholder="อายุ">
+            <input type="text" id="editBreed" placeholder="พันธุ์">
+            <input type="text" id="editWeight" placeholder="น้ำหนัก">
+            <input type="text" id="editColor" placeholder="สีขน">
+            <button onclick="saveEdit()">บันทึก</button>
+        </div>
+    </div>
+
+    <!-- Add History Modal -->
+    <div class="modal" id="addModal">
+        <div class="modal-content">
+            <h2>เพิ่มประวัติการรักษา</h2>
+            <input type="date" id="historyDate">
+            <input type="text" id="historyDescription" placeholder="ประวัติการรักษา">
+            <input type="text" id="medicineName" placeholder="ชื่อยา">
+            <input type="number" id="medicinePrice" placeholder="ราคา">
+            <input type="date" id="appointmentDate" placeholder="นัดหมาย">
+            <button onclick="addHistory()">ยืนยัน</button>
+        </div>
+    </div>
+    <script src="petinformation.js"></script>
+</body>
+</html>

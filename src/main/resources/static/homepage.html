@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fluffy Paws Clinic</title>
+    <link rel="stylesheet" href="homepage.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="header-bar">
+        <img src="logo.png" alt="Fluffy Paws Clinic Logo">
+        <h1>Fluffy Paws Clinic</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="🔍︎  กรอกข้อมูลเพื่อค้นหา">
+        </div>
+    </div>
+
+    <div class="content">
+        <table id="appointments-table">
+            <tr>
+                <th>เบอร์โทรศัพท์</th>
+                <th>ชื่อเจ้าของสัตว์</th>
+                <th>ชื่อสัตว์เลี้ยง</th>
+                <th>นัดหมาย</th>
+                <th class="edit-column">แก้ไข</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="edit-column"><span class="edit-icon" onclick="editRow(this)">✎️</span></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="edit-column"><span class="edit-icon" onclick="editRow(this)">✎️</span></td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="delete-icon" onclick="deleteRow()">⛔️</div>
+    <div class="add-button" onclick="addRow()">+</div>
+</div>
+
+<script src="homepage.js"></script>
+</body>
+</html>
